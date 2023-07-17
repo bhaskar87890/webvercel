@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    </head>
+    
+    <style>
+         *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family:'poppins', sans-serif;
+        }
+        body{
+            color:white;
+        }
+        header{
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            padding: 20px 10%;
+            background:transparent;
+            display:flex;
+            justify-content: space-between;
+            align-items:center;
+            z-index:100;
+}
+.logo{
+    position:relative;
+    font-size:25px;
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    cursor:default;
+    opacity:0;
+    animation:slideRight 1s ease-in forwards;
+}
+.navbar a{
+    display:inline-block;
+    font-size:25px;
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    margin-left:35px;
+    transition: 0.3s;
+    animation:slideTop 1s ease-in forwards;
+    animation-delay:calc(.2s *var(--i));
+}
+.navbar a:hover{
+    color:aqua;
+}
+.home{
+    position:relative;
+    width:100%;
+    justify-content:space-between;
+    height:100vh;
+    background:url("background blue.jpg");
+    background-size: cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    padding:70px 10% 0;
+}
+.home-content{
+    max-width:600px;
+}
+.home-content h2{
+    animation: slideBottom 1s ease forwards;
+animation-delay:0.7s;
+
+}
+.home-content h3{
+font-size:32px;
+font-weight:700;
+color:aqua;
+animation: slideBottom 1s ease forwards;
+animation-delay:0.7s;
+margin-bottom:30px;
+}
+
+
+
+.home-content h3.span{
+    color:aqua;
+
+}
+
+.home-content h1{
+    font-size:50px;
+    font-weight:700;
+    margin:-3px 0;
+    animation:slideRight 1s ease-in forwards;
+}
+.home-content p{
+    font-size:20px;
+    opacity:0;
+    animation:slideLeft 1s ease-in forwards;
+    animation-delay:1s;
+}
+.home-sci a {
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    color:aqua;
+    height:40px;
+    width:40px;
+    background:transparent;
+   border:2px solid aqua;
+   border-radius:50%;
+   font-size:20px;
+   text-decoration:none;
+   transition:.5s ease;
+   opacity:0;
+   animation:slideLeft 1s ease-in forwards;
+   animation-delay:calc(.2s * var(--i));
+   margin:30px 15px 10px 0;
+}
+.home-sci a :hover{
+    background:aqua;
+    color:black;
+    box-shadow:0 0 20px aqua;
+}
+.btn-box{
+    display:inline-block;
+    padding:12px 20px;
+    background:aqua;
+    border-radius:40px;
+    font-size:16px;
+    color:black;
+    letter-spacing:1px;
+    text-decoration:none;
+    font-weight:600;
+    margin-top:20px;
+    animation:slideTop 1s ease-in forwards;
+    animation-delay:2s;
+    box-shadow:0 0 5px aqua, 
+    0 0 25px aqua;
+
+}
+.btn-box:hover{
+    box-shadow:0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan,0 0 200px cyan;
+}
+@keyframes slideRight {
+    0%{
+        transform:translateX(-100px);
+        opacity:0;
+    }
+    100%{
+        transform:translateX(0px);
+        opacity:1;
+    }
+    
+}
+@keyframes slideLeft {
+    0%{
+        transform:translateX(100px);
+        opacity:0;
+    }
+    100%{
+        transform:translateX(0px);
+        opacity:1;
+    }
+    
+}
+
+@keyframes slideTop {
+    0%{
+        transform:translateY(100px);
+        opacity:0;
+    }
+    100%{
+        transform:translateY(0px);
+        opacity:1;
+    }
+    
+}
+@keyframes slideBottom {
+    0%{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+    100%{
+        transform:translateY(0px);
+        opacity:1;
+    }
+    
+}
+.images{
+    position:absolute;
+    width: 300px;
+    height: 300px;
+    bottom:200px;
+    right: 75px;
+    transform:translateX(-50%);
+    transition: left 1s;
+    
+}
+.images:hover .boys{
+    left: 45px;
+}
+
+
+
+
+
+
+    </style>
+   
+<body>
+    <header>
+        <a href="#" class="logo">Portfolio</a>
+        <nav class="navbar">
+        <a href="#" style="--i:1" class="active"> Home</a>
+        <a href="#"  style="--i:2" >About</a>
+        <a href="#"  style="--i:3" >Skills</a>
+        <a href="#" style="--i:4" >Portfolio</a>
+        <a href="#" style="--i:5" >Contact Me</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-content">
+            <h2>Hello, It's me</h2>
+            <h1>Bhaskar Samanta</h1>
+            <h3>And I'm a 
+                Web-developer,
+                Machine-Learning Enthusiast,
+                Coding Expert.
+            </h3>
+            <p>I'm a web-developer and slowly developing interest in web-development.
+                <br>I'm a student of UEM Kolkata pursuing B.Tech in Computer Science and Technology. I am a machine learning enthusiast and passionate about coding.
+            </p>
+            <div class="home-sci">
+             <a href="#" style="--i:7" ><i class='bx bxl-facebook'></i></a>
+             <a href="#" style="--i:8" ><i class='bx bxl-instagram'></i></a>
+             <a href="#" style="--i:9" ><i class='bx bxl-whatsapp'></i></a>  
+            <a href="#" style="--i:10" ><i class='bx bxl-linkedin'></i></a>
+             </div>
+           <a href="#" class="btn-box">More About Me</a>
+             
+        </div>
+    </section>
+    <div class="images">
+        <img src="jrs.jpg" class="boys">
+    </div>
+    
+</body>
+</html>
